@@ -1,3 +1,4 @@
+-- TODO: acho que nao ta funfando
 return {
 	"abecodes/tabout.nvim",
 	dependencies = { "nvim-cmp" }, -- se estiver usando esses plugins

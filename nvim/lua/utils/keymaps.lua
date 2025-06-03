@@ -11,9 +11,12 @@ vim.keymap.set('n', '<leader>p', '"+p')   -- colar
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz') 
 
+-- entrar no buffer
+vim.keymap.set('n', '<C-j>','<C-w>j')
+vim.keymap.set('n', '<C-k>','<C-w>k')
 
 -- trouble
-vim.api.nvim_set_keymap( "n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { silent = true, noremap = true, desc = "disgnósticos do trouble" }) -- abre o diagnostico
+-- vim.api.nvim_set_keymap( "n", "<leader>d", "<cmd>Trouble diagnostics toggle<cr>", { silent = true, noremap = true, desc = "disgnósticos do trouble" }) -- abre o diagnostico
 vim.api.nvim_set_keymap("n", "<leader>da", "<cmd>Trouble<cr>", { silent = true, noremap = true, desc = "mostra comandos do trouble"}) -- abre a janela do trouble
 
 -- formatação -> formatting.lua

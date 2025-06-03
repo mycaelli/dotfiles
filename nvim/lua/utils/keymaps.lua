@@ -9,7 +9,7 @@ vim.keymap.set('n', '<leader>p', '"+p')   -- colar
 
 -- move centralizado
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz') 
 
 
 -- trouble
@@ -45,7 +45,9 @@ vim.keymap.set("n", "<C-f>", function() local snack = require("snacks") snack.pi
 -- -- telescope
 -- vim.keymap.set("n", "<C-f>", require("telescope.builtin").find_files, { desc = "busca arquivos" }) -- search for files --
 vim.keymap.set("n", "<C-g>", require("telescope.builtin").live_grep, { desc = "grep de textos" }) -- search for text --
+vim.keymap.set("n", "<C-s>", require("telescope.builtin").grep_string, { desc = "grep de textos" }) -- search for text --
 vim.keymap.set("n", "<C-p>", require("telescope.builtin").oldfiles, { desc = "busca últimod arquivos abertos"}) -- search for text --
+
 -- vim.keymap.set("n", "<C-g>f", require("telescope.builtin").lsp_document_symbols, { desc = "" })
 -- vim.keymap.set("n", "<C-g>s", require("telescope.builtin").grep_string, { desc = "grep de strings"})
 

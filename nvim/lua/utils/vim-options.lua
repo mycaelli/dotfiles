@@ -27,3 +27,7 @@ vim.opt.undofile = true
 
 -- case insenstivie
 vim.o.ignorecase = true
+
+-- theme
+-- vim.o.background = "dark"
+-- vim.cmd.colorscheme("tokyonight")

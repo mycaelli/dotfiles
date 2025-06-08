@@ -16,7 +16,7 @@ return {
 		require("lualine").setup({
 			options = {
 				icons_enabled = true, -- Habilita ícones
-				theme = "sonokai",
+				theme = "tokyonight",
 				component_separators = "",
 				section_separators = "",
 				disabled_filetypes = {}, -- Arquivos que não devem mostrar a linha de status

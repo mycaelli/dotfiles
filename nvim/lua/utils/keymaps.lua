@@ -59,9 +59,9 @@ local dap = require('dap')
 local dapui = require('dapui')
 
 vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint, { desc = 'Toggle Breakpoint' })
-vim.keymap.set('n', '<leader>dB', function()
-  dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
-end, { desc = 'Set Conditional Breakpoint' })
+-- vim.keymap.set('n', '<leader>dB', function()
+--   dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+-- end, { desc = 'Set Conditional Breakpoint' })
 
 vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'Start/Continue Session' })
 vim.keymap.set('n', '<leader>di', dap.step_into, { desc = 'Step Into' })

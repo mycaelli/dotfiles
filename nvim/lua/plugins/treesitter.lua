@@ -4,7 +4,7 @@ return {
 	event = { "BufRead", "BufWritePost" },
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			auto_install = false,
+			auto_install = true,
 			sync_install = false,
 			ignore_install = {},
 			modules = {},
@@ -55,9 +55,10 @@ return {
 			},
 			playground = { enable = true },
 			highlight = { enable = true },
-			indent = { enable = false },
+			indent = { enable = true },
 			autotag = { enable = true },
 			matchup = { enable = true },
   })
   end
 }
+

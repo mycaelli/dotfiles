@@ -26,10 +26,29 @@ config.keys = {
     mods = 'CTRL|SHIFT',
     action = wezterm.action.SpawnWindow,
   },
+  -- fecha o terminal
+  {key="Q",
+    mods="CTRL",
+    action=wezterm.action{CloseCurrentTab={confirm=true}}
+  },
+    -- Fecha a aba atual com Ctrl+Q
+  {key="q", 
+    mods="CTRL", 
+    action=wezterm.action{CloseCurrentTab={confirm=true}}
+  },
+    -- Próxima aba: Ctrl+Shift+→
+  {key="RightArrow", 
+    mods="CTRL|SHIFT", 
+    action=wezterm.action{ActivateTabRelative=1}
+  },
+    -- Aba anterior: Ctrl+Shift+←
+  {key="LeftArrow", 
+    mods="CTRL|SHIFT", 
+    action=wezterm.action{ActivateTabRelative=-1}
+  },
 }
 -- config.cursor_bg = "#FF5C8A"
 -- config.cursor_fg = "#000000"
 -- config.cursor_border = "#FF5C8A"
 
 return config
-

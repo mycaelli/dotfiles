@@ -6,5 +6,4 @@ return {
   ---@type snacks.Config
   opts = {
   },
-  -- enabled = false,
 }

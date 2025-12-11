@@ -5,7 +5,7 @@ return {
     require("notify").setup({
       -- Aqui você pode adicionar configurações personalizadas do nvim-notify
       stages = "fade_in_slide_out", -- escolha o estilo da animação: fade, slide, static
-      render = "wrapped-compact",
+      render = "default",
       fps = 60,
       background_colour = "#2d2a2e", -- Use uma cor similar ao fundo do Sonokai para um visual harmonioso
       top_down = false,

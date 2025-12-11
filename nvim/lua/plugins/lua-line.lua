@@ -1,7 +1,20 @@
 -- personaliza rodapé
 
-local function filepath()
+-- local function filepath()
+--   return vim.fn.fnamemodify(vim.fn.expand('%'), ':p')
+-- end
+
+local function filename()
   return vim.fn.fnamemodify(vim.fn.expand('%'), ':~:.')
+end
+
+local function filepath()
+  -- Obtém o diretório do projeto atual (onde você abriu o Neovim)
+  local project_dir = vim.fn.getcwd()
+  -- Obtém o caminho completo do arquivo atual
+  local full_path = vim.fn.fnamemodify(vim.fn.expand('%'), ':p')
+  -- Remove a parte do caminho que é o diretório do projeto (tornando o caminho relativo)
+  return string.gsub(full_path, "^" .. vim.pesc(project_dir), "") -- Remove o prefixo do caminho
 end
 
 local function lsp_status()
@@ -21,10 +34,13 @@ return {
 				section_separators = "",
 				disabled_filetypes = {}, -- Arquivos que não devem mostrar a linha de status
 			},
+      winbar = {
+        lualine_c = { filepath },
+      },
 			sections = {
 				lualine_a = { "mode" }, -- Exibe o modo de edição (normal, insert, etc.)
 				lualine_b = { "branch", "diff" }, -- Mostra a branch do Git
-				lualine_c = { filepath }, -- Exibe o nome do arquivo atual
+				lualine_c = {},
 				lualine_x = {
 					{
 						"diagnostics",
@@ -37,17 +53,8 @@ return {
 					{ "file_encoding" },
 					{ "file_format" },
 				},
-				lualine_z = { "location" }, -- Mostra a localização (linha/coluna)
 			},
       extensions = {'fugitive'},
-			inactive_sections = { -- Configurações para janelas inativas
-				lualine_a = {},
-				lualine_b = {},
-				lualine_c = { "filename" },
-				lualine_x = { "location" },
-				lualine_y = {},
-				lualine_z = {},
-			},
 		})
 	end,
 }
